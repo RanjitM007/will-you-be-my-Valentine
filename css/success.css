@@ -1,0 +1,43 @@
+:root{
+  --pink:#ff4d6d;
+  --bg1:#fff0f6;
+  --bg2:#ffe3ec;
+}
+
+body{
+  font-family: Poppins, sans-serif;
+  min-height: 100vh;
+  background: radial-gradient(circle at top, var(--bg1), var(--bg2));
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding: 24px;
+}
+
+.cardx{
+  background: rgba(255,255,255,.85);
+  border-radius: 24px;
+  border: 1px solid rgba(255,255,255,.7);
+  box-shadow: 0 20px 60px rgba(0,0,0,.08);
+  backdrop-filter: blur(10px);
+  max-width: 720px;
+  width: 100%;
+  padding: 28px;
+  text-align:center;
+}
+
+.title{
+  font-family: Pacifico, cursive;
+  color: var(--pink);
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  margin-bottom: 8px;
+}
+
+.msg{
+  font-size: clamp(1rem, 2.2vw, 1.2rem);
+  color:#444;
+}
+
+.btn-back{
+  border-radius: 16px;
+}

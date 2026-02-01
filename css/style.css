@@ -1,0 +1,108 @@
+:root{
+  --pink:#ff4d6d;
+  --pink2:#ff8fab;
+  --bg1:#fff0f6;
+  --bg2:#ffe3ec;
+  --card:#ffffffcc;
+}
+
+body{
+  font-family: Poppins, sans-serif;
+  min-height: 100vh;
+  background: radial-gradient(circle at top, var(--bg1), var(--bg2));
+  overflow-x: hidden;
+}
+
+.title{
+  font-family: Pacifico, cursive;
+  color: var(--pink);
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  text-shadow: 0 8px 25px rgba(255,77,109,.18);
+}
+
+.subtitle{
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  color:#444;
+}
+
+.glass-card{
+  background: var(--card);
+  border: 1px solid rgba(255,255,255,.6);
+  box-shadow: 0 20px 60px rgba(0,0,0,.08);
+  border-radius: 24px;
+  backdrop-filter: blur(10px);
+}
+
+.heart{
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: var(--pink);
+  transform: rotate(45deg);
+  opacity: .25;
+  animation: floatUp 10s linear infinite;
+  border-radius: 3px;
+  pointer-events: none;
+}
+.heart::before, .heart::after{
+  content:"";
+  position:absolute;
+  width:16px;height:16px;
+  background: var(--pink);
+  border-radius: 50%;
+}
+.heart::before{ left:-8px; top:0; }
+.heart::after{ top:-8px; left:0; }
+
+@keyframes floatUp{
+  0%{ transform: translateY(20vh) rotate(45deg); }
+  100%{ transform: translateY(-120vh) rotate(45deg); }
+}
+
+.btn-yes{
+  background: linear-gradient(135deg, var(--pink), #ff2d55);
+  border: none;
+  box-shadow: 0 12px 30px rgba(255,77,109,.35);
+}
+.btn-yes:hover{ filter: brightness(1.05); }
+
+.btn-no{
+  position: absolute;
+  left: 52%;
+  top: 65%;
+  transform: translate(-50%, -50%);
+  transition: transform .12s ease;
+}
+
+.play-area{
+  position: relative;
+  width: 100%;
+  height: 320px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(255,77,109,.10), rgba(255,143,171,.10));
+  overflow: hidden;
+  border: 1px dashed rgba(255,77,109,.25);
+}
+
+.badge-love{
+  background: rgba(255,77,109,.10);
+  border: 1px solid rgba(255,77,109,.25);
+  color: #c9184a;
+}
+
+.small-note{
+  font-size: .9rem;
+  color:#666;
+}
+
+@media (max-width: 576px){
+  .play-area{ height: 360px; }
+}
+.odia-text{
+  display: block;
+  margin-top: 12px;
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  color: #1e6cff; /* beautiful blue */
+  font-weight: 500;
+  line-height: 1.6;
+}
