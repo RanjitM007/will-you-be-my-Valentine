@@ -1,5 +1,5 @@
 // Set name from localStorage (aapke purane code me bhi yahi logic tha) :contentReference[oaicite:2]{index=2}
-const n = localStorage.getItem('gfName') || "Ranjit";
+const n = localStorage.getItem('gfName') || "Somali";
 document.getElementById('gfName').textContent = n;
 document.getElementById('gfName2').textContent = n;
 
